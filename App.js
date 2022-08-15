@@ -23,7 +23,13 @@ setEnteredGoalText(enteredText)
         <Button title="Add Goal" onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-        <Text>List of the goals.....</Text>
+       {myGoals.map((singleGoal,index)=>{
+        return(
+      <View index={index}>
+            <Text>{index}{" "}{singleGoal}</Text>
+        </View>
+        )
+       })}
       </View>
     </View>
   );
